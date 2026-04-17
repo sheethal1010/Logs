@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@mipmap/bg_welcome">
+
+    <LinearLayout
+        android:id="@+id/shapesGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/shape_orange_circle" />
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/shape_dark_grey_top_left" />
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/shape_red_bottom_right" />
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/shape_light_grey_bottom_left" />
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/shape_dark_grey_corners" />
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/shape_orange_top_left" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:text="LOGS"
+        android:textSize="76sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/big_shoulders_inline_display_black"
+        android:letterSpacing="0.15"
+        />
+
+    <!-- GET STARTED Button - FIXED WIDTH -->
+
+
+    <TextView
+        android:id="@+id/getStartedBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="0dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="GET STARTED"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:fontFamily="@font/inter_medium"
+        android:background="@drawable/get_started_button_glass_bg"
+        android:letterSpacing="0.08"
+        />
+
+</LinearLayout>

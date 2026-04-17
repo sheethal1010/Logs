@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Folder Name + Count + Arrow -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Folder Name -->
+            <TextView
+                android:id="@+id/folderName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Folder 1"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/inter_semibold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Incomplete Count -->
+            <TextView
+                android:id="@+id/incompleteCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginStart="8dp" />
+
+            <!-- Arrow Icon -->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_arrow_right"
+                app:tint="#000000"
+                android:layout_marginStart="4dp"
+                />
+
+        </LinearLayout>
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C7C6C6"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Todo Preview (3 items max) -->
+        <LinearLayout
+            android:id="@+id/todoPreviewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Todo items will be added programmatically -->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/popup_background"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Highlight Color"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Yellow -->
+        <View
+            android:id="@+id/colorYellow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/color_circle"
+            android:backgroundTint="#FFFF00"
+            android:layout_margin="6dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Green -->
+        <View
+            android:id="@+id/colorGreen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/color_circle"
+            android:backgroundTint="#00FF00"
+            android:layout_margin="6dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Blue -->
+        <View
+            android:id="@+id/colorBlue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/color_circle"
+            android:backgroundTint="#ADD8E6"
+            android:layout_margin="6dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Pink -->
+        <View
+            android:id="@+id/colorPink"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/color_circle"
+            android:backgroundTint="#FFB6C1"
+            android:layout_margin="6dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Orange -->
+        <View
+            android:id="@+id/colorOrange"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/color_circle"
+            android:backgroundTint="#FFA500"
+            android:layout_margin="6dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

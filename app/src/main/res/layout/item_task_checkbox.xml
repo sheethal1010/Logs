@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Checkbox -->
+    <FrameLayout
+        android:id="@+id/checkbox"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/task_checkbox_bg"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Checkmark (visible when completed) -->
+        <ImageView
+            android:id="@+id/checkmark"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            android:contentDescription="Completed" />
+
+    </FrameLayout>
+
+    <!-- com.hearthborn.studios.logs.Task Title -->
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Buy Groceries"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/inter_regular" />
+
+</LinearLayout>

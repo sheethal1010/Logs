@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/note_card_border"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:minHeight="160dp">
+
+    <!-- com.hearthborn.studios.logs.Note Title -->
+    <TextView
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note 1"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/inter_semibold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginBottom="12dp" />
+
+    <!-- com.hearthborn.studios.logs.Note Content -->
+    <TextView
+        android:id="@+id/noteContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello Everyone, I am Kabir,\nDeveloper of Logs- A note taking applicati..."
+        android:textSize="14sp"
+        android:textColor="@color/text_grey"
+        android:fontFamily="@font/inter_regular"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:lineSpacingExtra="2dp" />
+
+</LinearLayout>

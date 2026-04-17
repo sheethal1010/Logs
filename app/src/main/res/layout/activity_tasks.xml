@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey">
+
+    <!-- Top toolbar row (left title, right icons) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TASKS"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            app:tint="@color/text_grey"
+            android:contentDescription="search"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/addIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            app:tint="@color/text_grey"
+            android:contentDescription="add"
+            android:padding="10dp"
+            android:layout_marginLeft="8dp" />
+
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu"
+            app:tint="@color/text_grey"
+            android:contentDescription="menu"
+            android:padding="10dp"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+
+    <!-- Content area - this will be populated by your fragment/page -->
+    <FrameLayout
+        android:id="@+id/tasksContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp" />
+</LinearLayout>

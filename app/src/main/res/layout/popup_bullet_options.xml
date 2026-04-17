@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/popup_background"
+    android:padding="0dp">
+
+    <!-- Bullet List (Circle/Dot) -->
+    <LinearLayout
+        android:id="@+id/bulletListOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bullets_circle"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Bullet List" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bullet List"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/inter_regular" />
+
+    </LinearLayout>
+
+    <!-- Squared List -->
+    <LinearLayout
+        android:id="@+id/squaredListOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bullets_squircle"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Squared List" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Squared List"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/inter_regular" />
+
+    </LinearLayout>
+
+    <!-- Numbered List -->
+    <LinearLayout
+        android:id="@+id/numberedListOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bullets_number"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Numbered List" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numbered List"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/inter_regular" />
+
+    </LinearLayout>
+
+    <!-- Roman List -->
+    <LinearLayout
+        android:id="@+id/romanListOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bullets_roman"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Roman List" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roman List"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/inter_regular" />
+
+    </LinearLayout>
+
+</LinearLayout>

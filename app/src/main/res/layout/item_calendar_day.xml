@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/day_card_bg"
+    android:padding="12dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:minHeight="100dp">
+
+    <!-- Left side: Date Number and Month -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginEnd="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Day Number -->
+        <TextView
+            android:id="@+id/dayNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14"
+            android:textSize="52sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/inter_black"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.8" />
+
+        <!-- Month -->
+        <TextView
+            android:id="@+id/monthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feb"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/inter_black"
+            android:layout_marginTop="-6dp"
+            android:includeFontPadding="false" />
+
+    </LinearLayout>
+
+    <!-- Right side: Events or "No Events" -->
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!-- Events Container (visible when has events) -->
+        <LinearLayout
+            android:id="@+id/eventsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone">
+
+            <!-- Events will be added programmatically -->
+
+        </LinearLayout>
+
+        <!-- No Events Text (visible when no events) -->
+        <TextView
+            android:id="@+id/noEventsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• No Events"
+            android:textSize="14sp"
+            android:textColor="#9B9B9B"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+</LinearLayout>

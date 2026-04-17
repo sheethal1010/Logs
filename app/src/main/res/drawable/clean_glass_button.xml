@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shadow/Glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#20000000" />
+            <corners android:radius="32dp" />
+        </shape>
+    </item>
+
+    <!-- Main glass background -->
+    <item
+        android:top="1dp"
+        android:bottom="2dp"
+        android:left="1dp"
+        android:right="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#85FFFFFF" />
+            <corners android:radius="31dp" />
+        </shape>
+    </item>
+
+    <!-- Top shine/reflection -->
+    <item
+        android:top="1dp"
+        android:bottom="35dp"
+        android:left="1dp"
+        android:right="1dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:startColor="#50FFFFFF"
+                android:centerColor="#20FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="linear" />
+            <corners android:radius="31dp" />
+        </shape>
+    </item>
+
+    <!-- Border -->
+    <item
+        android:top="1dp"
+        android:bottom="2dp"
+        android:left="1dp"
+        android:right="1dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1.5dp"
+                android:color="#95FFFFFF" />
+            <corners android:radius="31dp" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Logs</string>
+    <string name="notes_file_name">notes.json</string>
+    <string name="notes_folder_name">Logs_Notes</string>
+    <string name="json_encoding">UTF-8</string>
+    <string name="json_id">id</string>
+    <string name="json_title">title</string>
+    <string name="json_content">content</string>
+    <string name="json_pinned">pinned</string>
+</resources>

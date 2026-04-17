@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="false">
+
+    <!-- Top Bar: NO folder section, just action icons -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp">
+
+        <!-- Spacer so icons stay right-aligned -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/undoButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_undo"
+            app:tint="@color/black"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Undo" />
+
+        <ImageView
+            android:id="@+id/redoButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_redo"
+            app:tint="@color/black"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Redo" />
+
+        <ImageView
+            android:id="@+id/pinButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_pin"
+            app:tint="@color/black"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Pin" />
+
+        <!-- ID is menuIcon to match Java code -->
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_menu"
+            app:tint="@color/black"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menu" />
+
+    </LinearLayout>
+
+    <!-- Scroll View for com.hearthborn.studios.logs.Note Content -->
+    <ScrollView
+        android:id="@+id/noteScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@id/bottomSection"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <!-- com.hearthborn.studios.logs.Note Title -->
+            <EditText
+                android:id="@+id/noteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:textSize="28sp"
+                android:textColor="@color/text_black_full"
+                android:textColorHint="@color/text_black_30"
+                android:fontFamily="@font/inter_extrabold"
+                android:background="@null"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp"
+                android:inputType="textCapSentences|textMultiLine"
+                android:gravity="start"
+                android:maxLines="3" />
+
+            <!-- com.hearthborn.studios.logs.Note Content -->
+            <EditText
+                android:id="@+id/noteContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Start typing..."
+                android:textSize="16sp"
+                android:textColor="@color/text_black_full"
+                android:textColorHint="@color/text_black_30"
+                android:fontFamily="@font/inter_light"
+                android:background="@null"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp"
+                android:inputType="textCapSentences|textMultiLine"
+                android:gravity="start|top"
+                android:minHeight="400dp"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Section -->
+    <LinearLayout
+        android:id="@+id/bottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <!-- Formatting Toolbar -->
+        <LinearLayout
+            android:id="@+id/formattingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F4F4F4"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Row 1: B / I / U / aA / Highlight -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/boldButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_bold"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/italicButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_italics"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/underlineButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_underline"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/capsButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_cap"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/highlightButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_highlighter"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+            </LinearLayout>
+
+            <!-- Row 2: Align L / Align C / Align R / Image / Bullets -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/alignLeftButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_align_left"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/alignCenterButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_align_center"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/alignRightButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_align_right"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/imageButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_image"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageView
+                    android:id="@+id/bulletButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_bullets"
+                    android:padding="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:tint="#9B9B9B"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Date and Word Count -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="16 February, 2026"
+                android:textSize="12sp"
+                android:textColor="@color/text_black_30"
+                android:fontFamily="@font/inter_regular" />
+
+            <TextView
+                android:id="@+id/wordCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Words: 0"
+                android:textSize="12sp"
+                android:textColor="@color/text_black_30"
+                android:fontFamily="@font/inter_regular" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons: Delete | Share | Save -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="20dp"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:id="@+id/deleteButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/delete_button_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_delete"
+                    app:tint="@color/white" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/shareButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/share_button_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="SHARE"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_regular" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/save_button_bg"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="SAVE"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_regular" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>

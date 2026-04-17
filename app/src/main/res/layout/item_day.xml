@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/ripple_effect">
+
+    <!-- Day Header (Always Visible) -->
+    <LinearLayout
+        android:id="@+id/dayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Day Name -->
+        <TextView
+            android:id="@+id/dayName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MONDAY"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_semibold" />
+
+        <!-- com.hearthborn.studios.logs.Task Count -->
+        <TextView
+            android:id="@+id/taskCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textSize="48sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_black" />
+
+    </LinearLayout>
+
+    <!-- Expandable ScrollView Container -->
+    <ScrollView
+        android:id="@+id/dayScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:nestedScrollingEnabled="false">
+
+        <LinearLayout
+            android:id="@+id/expandableContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Date/Time -->
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FEB, 04 2026 - 9:50 AM"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="-8dp" 
+                android:layout_marginBottom="12dp" />
+
+            <!-- Tasks RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tasksRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- Add com.hearthborn.studios.logs.Task Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="16dp">
+
+                <EditText
+                    android:id="@+id/addTaskInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Add a new task..."
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/text_grey"
+                    android:fontFamily="@font/inter_regular"
+                    android:background="@null"
+                    android:padding="8dp"
+                    android:inputType="text"
+                    android:imeOptions="actionDone" />
+
+                <TextView
+                    android:id="@+id/addTaskButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter_semibold"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/ripple_effect" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Separator Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator_grey" />
+
+</LinearLayout>
